@@ -149,7 +149,10 @@ $.get(URLReq, function (data) {
                 html += "</table></div>";
                 //$("#contentContainer").eq(0).prepend(html);
                 //$("#mobileContent").eq(0).prepend(html);
-                var t = `<td class="box-item">Total loot this run: <b class='nowrap'><span class="bonus_icon bonus_icon_8"></span>${totalLootArr.reduce((a, b) => a + b, 0)}</b></td>`;
+                var t = `<table class="box menu nowrap">
+	                        <tbody>
+                                 <tr id="menu_row2">
+								    <td class="box-item">Total loot this run: <b class='nowrap'><span class="bonus_icon bonus_icon_8"></span>${totalLootArr.reduce((a, b) => a + b, 0)}</b></td></tr></tbody></table>`;
                 $("#contentContainer").eq(0).prepend(t);
                 $("#mobileContent").eq(0).prepend(t);
                 Timing.tickHandlers.timers.init();
