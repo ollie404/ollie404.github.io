@@ -147,8 +147,8 @@ $.get(URLReq, function (data) {
                     totalLootArr.push(getLootedRes(scavengeInfo[villageNr]).reduce((a, b) => a + b, 0));
                 })
                 html += "</table></div>";
-                $("#contentContainer").eq(0).prepend(html);
-                $("#mobileContent").eq(0).prepend(html);
+                //$("#contentContainer").eq(0).prepend(html);
+                //$("#mobileContent").eq(0).prepend(html);
                 var t = `<td class="box-item">Total loot this run: <b class='nowrap'><span class="bonus_icon bonus_icon_8"></span>${totalLootArr.reduce((a, b) => a + b, 0)}</b></td>`;
                 $("#menu_row2").append(t);
                 Timing.tickHandlers.timers.init();
