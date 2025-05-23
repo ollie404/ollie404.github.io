@@ -1,5 +1,5 @@
 javascript:
-
+var totalLootArr = [];
 //scav overview by Sophie "Shinko to Kuma"
 // if no one is sitting the account
 if (game_data.player.sitter > 0) {
@@ -144,10 +144,13 @@ $.get(URLReq, function (data) {
                         }
                     })
                     html += "</tr>";
+                    totalLootArr.push(getLootedRes(scavengeInfo[villageNr]).reduce((a, b) => a + b, 0));
                 })
                 html += "</table></div>";
                 $("#contentContainer").eq(0).prepend(html);
                 $("#mobileContent").eq(0).prepend(html);
+                var t = `<td class="box-item">Total loot this run: <b class='nowrap'><span class="bonus_icon bonus_icon_8"></span>${totalLootArr.reduce((a, b) => a + b, 0)}</b></td>`;
+                $("#menu_row2").append(t);
                 Timing.tickHandlers.timers.init();
             },
             (error) => {
@@ -155,3 +158,28 @@ $.get(URLReq, function (data) {
             });
     }
     )
+function getLootedRes(data){
+    var loot = [];
+    
+    var wood = 0;
+    var stone = 0;
+    var iron = 0;
+    
+    var sumArr = [];
+    
+    for(var i=1; i <= 4; i++){
+        if(data.options[i].scavenging_squad !== null){
+            loot.push(data.options[i].scavenging_squad.loot_res);
+        } else {
+            i++;
+        }
+    }
+    loot.forEach(element => {
+      wood += element.wood;
+      stone += element.stone;
+      iron += element.iron;
+    });
+    sumArr.push(wood, stone, iron)
+    
+    return sumArr;
+}
