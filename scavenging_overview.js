@@ -150,8 +150,8 @@ $.get(URLReq, function (data) {
                 //$("#contentContainer").eq(0).prepend(html);
                 //$("#mobileContent").eq(0).prepend(html);
                 var t = `<td class="box-item">Total loot this run: <b class='nowrap'><span class="bonus_icon bonus_icon_8"></span>${totalLootArr.reduce((a, b) => a + b, 0)}</b></td>`;
-                $("#contentContainer").eq(0).append(t);
-                $("#mobileContent").eq(0).append(t);
+                $("#contentContainer").eq(0).prepend(t);
+                $("#mobileContent").eq(0).prepend(t);
                 Timing.tickHandlers.timers.init();
             },
             (error) => {
