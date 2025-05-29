@@ -187,7 +187,7 @@ else {
 if (localStorage.getItem("sendOrder") == null) {
     console.log("No sendorder found, making new one")
     worldUnits = game_data.units;
-    var sendOrder = ['hello', 'heavy', 'spear', 'sword', 'axe', 'archer', 'marcher'];
+    var sendOrder = ['light', 'heavy', 'spear', 'sword', 'axe', 'archer', 'marcher'];
     // for (var i = 0; i < worldUnits.length; i++) {
     //     if (worldUnits[i] != "militia" && worldUnits[i] != "snob" && worldUnits[i] != "ram" && worldUnits[i] != "catapult" && worldUnits[i] != "spy" && worldUnits[i] != "knight") {
     //         sendOrder.push(worldUnits[i])
@@ -916,48 +916,48 @@ $("#timeSelectorHours")[0].addEventListener("input", function () {
 //create checkboxes and add them to the UI
 
 
-// for (var i = 0; i < sendOrder.length; i++) {
+for (var i = 0; i < sendOrder.length; i++) {
 
-//     $("#imgRow").eq(0).append(`<td align="center" style="background-color:${backgroundColor}">
-//     <table class="vis" border="1" style="width: 100%">
-//     <thead>
-//     </thead>
-//     <tbody>    
-//         <tr>
-//             <td style=" text-align:center;background-color:${headerColor};padding: 5px;"><img src="https://dsen.innogamescdn.com/asset/cf2959e7/graphic/unit/unit_${sendOrder[i]}.png" title="${sendOrder[i]}" alt="" class=""></td>
-//         </tr>
-//         <tr>
-//             <td align="center" style="background-color:${backgroundColor};padding: 5px;"><input type="checkbox" ID="${sendOrder[i]}" name="${sendOrder[i]}"></td>
-//         </tr>
-//         <tr>
-//             <td style="text-align:center; width:auto; background-color:#202225;padding: 5px;"><font color="#ffffdf">Backup</font></td>
-//         </tr>
-//         <tr>
-//             <td align="center" style="background-color:${backgroundColor};padding: 5px;"><input type="text" ID="${sendOrder[i]}Backup" name="${sendOrder[i]}" value="${keepHome[sendOrder[i]]}" size="5"></td>
-//         </tr>
-//         </tbody>  
-//     </table>
-// </td>`);
-//     $("#imgRow").sortable({
-//         axis: "x",
-//         revert: 100,
-//         containment: "parent",
-//         forceHelperSize: true,
-//         delay: 100,
-//         scroll: false
-//     }).disableSelection();
+    $("#imgRow").eq(0).append(`<td align="center" style="background-color:${backgroundColor}">
+    <table class="vis" border="1" style="width: 100%">
+    <thead>
+    </thead>
+    <tbody>    
+        <tr>
+            <td style=" text-align:center;background-color:${headerColor};padding: 5px;"><img src="https://dsen.innogamescdn.com/asset/cf2959e7/graphic/unit/unit_${sendOrder[i]}.png" title="${sendOrder[i]}" alt="" class=""></td>
+        </tr>
+        <tr>
+            <td align="center" style="background-color:${backgroundColor};padding: 5px;"><input type="checkbox" ID="${sendOrder[i]}" name="${sendOrder[i]}"></td>
+        </tr>
+        <tr>
+            <td style="text-align:center; width:auto; background-color:#202225;padding: 5px;"><font color="#ffffdf">Backup</font></td>
+        </tr>
+        <tr>
+            <td align="center" style="background-color:${backgroundColor};padding: 5px;"><input type="text" ID="${sendOrder[i]}Backup" name="${sendOrder[i]}" value="${keepHome[sendOrder[i]]}" size="5"></td>
+        </tr>
+        </tbody>  
+    </table>
+</td>`);
+    $("#imgRow").sortable({
+        axis: "x",
+        revert: 100,
+        containment: "parent",
+        forceHelperSize: true,
+        delay: 100,
+        scroll: false
+    }).disableSelection();
 
-//     if (prioritiseHighCat == true) {
-//         console.log('setting high priority cat')
-//         $(`#settingPriorityPriority`).prop("checked", true);
-//     }
-//     else {
-//         console.log('setting balanced')
-//         $(`#settingPriorityBalanced`).prop("checked", true);
-//     }
+    if (prioritiseHighCat == true) {
+        console.log('setting high priority cat')
+        $(`#settingPriorityPriority`).prop("checked", true);
+    }
+    else {
+        console.log('setting balanced')
+        $(`#settingPriorityBalanced`).prop("checked", true);
+    }
 
-//     enableCorrectTroopTypes();
-// }
+    enableCorrectTroopTypes();
+}
 
 
 
