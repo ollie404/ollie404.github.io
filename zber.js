@@ -198,7 +198,7 @@ if (localStorage.getItem("sendOrder") == null) {
 }
 else {
     console.log("Getting sendorder from storage");
-    var sendOrder = ['hello', 'heavy', 'spear', 'sword', 'axe', 'archer', 'marcher'];
+    var sendOrder = ['light', 'heavy', 'spear', 'sword', 'axe', 'archer', 'marcher'];
 }
 
 // runtimes
