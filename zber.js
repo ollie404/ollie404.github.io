@@ -982,7 +982,7 @@ function readyToSend() {
 
 
     //get trooptypes we wanna use, and runtime
-    console.log(sendOrder);
+    console.log();
     for (var i = 0; i < sendOrder.length; i++) {
         troopTypeEnabled[sendOrder[i]] = $(`:checkbox#${sendOrder[i]}`).is(":checked");
     }
@@ -1026,10 +1026,10 @@ function readyToSend() {
         prioritiseHighCat = false;
     }
 
-    sendOrder = [];
-    for (var k = 0; k < $("#imgRow :checkbox").length; k++) {
-        sendOrder.push($("#imgRow :checkbox")[k].name)
-    }
+    sendOrder = ['light', 'heavy', 'spear', 'sword', 'axe', 'archer', 'hihi'];
+    // for (var k = 0; k < $("#imgRow :checkbox").length; k++) {
+    //     sendOrder.push($("#imgRow :checkbox")[k].name)
+    // }
 
     console.log("Runtimes: Off: " + time.off + " Def: " + time.def);
     localStorage.setItem("troopTypeEnabled", JSON.stringify(troopTypeEnabled));
