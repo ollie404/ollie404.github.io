@@ -1,6 +1,4 @@
 javascript:
-var url1 = "https://code.jquery.com/ui/1.8.17/jquery-ui.min.js"
-$("head").append($("<script></script>").attr("src", url1));
 //mass scavenging by Sophie "Shinko to Kuma"
 serverTimeTemp = $("#serverDate")[0].innerText + " " + $("#serverTime")[0].innerText;
 serverTime = serverTimeTemp.match(/^([0][1-9]|[12][0-9]|3[01])[\/\-]([0][1-9]|1[012])[\/\-](\d{4})( (0?[0-9]|[1][0-9]|[2][0-3])[:]([0-5][0-9])([:]([0-5][0-9]))?)?$/);
@@ -918,48 +916,48 @@ $("#timeSelectorHours")[0].addEventListener("input", function () {
 //create checkboxes and add them to the UI
 
 
-for (var i = 0; i < sendOrder.length; i++) {
+// for (var i = 0; i < sendOrder.length; i++) {
 
-    $("#imgRow").eq(0).append(`<td align="center" style="background-color:${backgroundColor}">
-    <table class="vis" border="1" style="width: 100%">
-    <thead>
-    </thead>
-    <tbody>    
-        <tr>
-            <td style=" text-align:center;background-color:${headerColor};padding: 5px;"><img src="https://dsen.innogamescdn.com/asset/cf2959e7/graphic/unit/unit_${sendOrder[i]}.png" title="${sendOrder[i]}" alt="" class=""></td>
-        </tr>
-        <tr>
-            <td align="center" style="background-color:${backgroundColor};padding: 5px;"><input type="checkbox" ID="${sendOrder[i]}" name="${sendOrder[i]}"></td>
-        </tr>
-        <tr>
-            <td style="text-align:center; width:auto; background-color:#202225;padding: 5px;"><font color="#ffffdf">Backup</font></td>
-        </tr>
-        <tr>
-            <td align="center" style="background-color:${backgroundColor};padding: 5px;"><input type="text" ID="${sendOrder[i]}Backup" name="${sendOrder[i]}" value="${keepHome[sendOrder[i]]}" size="5"></td>
-        </tr>
-        </tbody>  
-    </table>
-</td>`);
-    $("#imgRow").draggable({
-        axis: "x",
-        revert: 100,
-        containment: "parent",
-        forceHelperSize: true,
-        delay: 100,
-        scroll: false
-    }).disableSelection();
+//     $("#imgRow").eq(0).append(`<td align="center" style="background-color:${backgroundColor}">
+//     <table class="vis" border="1" style="width: 100%">
+//     <thead>
+//     </thead>
+//     <tbody>    
+//         <tr>
+//             <td style=" text-align:center;background-color:${headerColor};padding: 5px;"><img src="https://dsen.innogamescdn.com/asset/cf2959e7/graphic/unit/unit_${sendOrder[i]}.png" title="${sendOrder[i]}" alt="" class=""></td>
+//         </tr>
+//         <tr>
+//             <td align="center" style="background-color:${backgroundColor};padding: 5px;"><input type="checkbox" ID="${sendOrder[i]}" name="${sendOrder[i]}"></td>
+//         </tr>
+//         <tr>
+//             <td style="text-align:center; width:auto; background-color:#202225;padding: 5px;"><font color="#ffffdf">Backup</font></td>
+//         </tr>
+//         <tr>
+//             <td align="center" style="background-color:${backgroundColor};padding: 5px;"><input type="text" ID="${sendOrder[i]}Backup" name="${sendOrder[i]}" value="${keepHome[sendOrder[i]]}" size="5"></td>
+//         </tr>
+//         </tbody>  
+//     </table>
+// </td>`);
+//     $("#imgRow").sortable({
+//         axis: "x",
+//         revert: 100,
+//         containment: "parent",
+//         forceHelperSize: true,
+//         delay: 100,
+//         scroll: false
+//     }).disableSelection();
 
-    if (prioritiseHighCat == true) {
-        console.log('setting high priority cat')
-        $(`#settingPriorityPriority`).prop("checked", true);
-    }
-    else {
-        console.log('setting balanced')
-        $(`#settingPriorityBalanced`).prop("checked", true);
-    }
+//     if (prioritiseHighCat == true) {
+//         console.log('setting high priority cat')
+//         $(`#settingPriorityPriority`).prop("checked", true);
+//     }
+//     else {
+//         console.log('setting balanced')
+//         $(`#settingPriorityBalanced`).prop("checked", true);
+//     }
 
-    enableCorrectTroopTypes();
-}
+//     enableCorrectTroopTypes();
+// }
 
 
 
@@ -984,7 +982,7 @@ function readyToSend() {
 
 
     //get trooptypes we wanna use, and runtime
-    console.log();
+    console.log(sendOrder);
     for (var i = 0; i < sendOrder.length; i++) {
         troopTypeEnabled[sendOrder[i]] = $(`:checkbox#${sendOrder[i]}`).is(":checked");
     }
@@ -1028,10 +1026,10 @@ function readyToSend() {
         prioritiseHighCat = false;
     }
 
-    sendOrder = [];
-    for (var k = 0; k < $("#imgRow :checkbox").length; k++) {
-        sendOrder.push($("#imgRow :checkbox")[k].name)
-    }
+    sendOrder = ['light', 'heavy', 'spear', 'sword', 'axe', 'archer', 'hihi'];
+    // for (var k = 0; k < $("#imgRow :checkbox").length; k++) {
+    //     sendOrder.push($("#imgRow :checkbox")[k].name)
+    // }
 
     console.log("Runtimes: Off: " + time.off + " Def: " + time.def);
     localStorage.setItem("troopTypeEnabled", JSON.stringify(troopTypeEnabled));
