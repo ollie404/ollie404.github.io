@@ -1,4 +1,6 @@
 javascript:
+var url1 = "https://code.jquery.com/ui/1.8.17/jquery-ui.min.js"
+$("head").append($("<script></script>").attr("src", url1));
 //mass scavenging by Sophie "Shinko to Kuma"
 serverTimeTemp = $("#serverDate")[0].innerText + " " + $("#serverTime")[0].innerText;
 serverTime = serverTimeTemp.match(/^([0][1-9]|[12][0-9]|3[01])[\/\-]([0][1-9]|1[012])[\/\-](\d{4})( (0?[0-9]|[1][0-9]|[2][0-3])[:]([0-5][0-9])([:]([0-5][0-9]))?)?$/);
