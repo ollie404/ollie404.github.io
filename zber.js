@@ -187,7 +187,7 @@ else {
 if (localStorage.getItem("sendOrder") == null) {
     console.log("No sendorder found, making new one")
     worldUnits = game_data.units;
-    var sendOrder = ['light', 'heavy', 'spear', 'sword', 'axe', 'archer', 'marcher'];
+    var sendOrder = ['heavy', 'light', 'spear', 'sword', 'axe', 'archer', 'marcher'];
     // for (var i = 0; i < worldUnits.length; i++) {
     //     if (worldUnits[i] != "militia" && worldUnits[i] != "snob" && worldUnits[i] != "ram" && worldUnits[i] != "catapult" && worldUnits[i] != "spy" && worldUnits[i] != "knight") {
     //         sendOrder.push(worldUnits[i])
@@ -198,7 +198,7 @@ if (localStorage.getItem("sendOrder") == null) {
 }
 else {
     console.log("Getting sendorder from storage");
-    var sendOrder = ['light', 'heavy', 'spear', 'sword', 'axe', 'archer', 'marcher'];
+    var sendOrder = ['heavy', 'light', 'spear', 'sword', 'axe', 'archer', 'marcher'];
 }
 
 // runtimes
@@ -1026,7 +1026,7 @@ function readyToSend() {
         prioritiseHighCat = false;
     }
 
-    sendOrder = ['light', 'heavy', 'spear', 'sword', 'axe', 'archer', 'marcher'];
+    sendOrder = ['heavy', 'light', 'spear', 'sword', 'axe', 'archer', 'marcher'];
     // for (var k = 0; k < $("#imgRow :checkbox").length; k++) {
     //     sendOrder.push($("#imgRow :checkbox")[k].name)
     // }
