@@ -187,18 +187,18 @@ else {
 if (localStorage.getItem("sendOrder") == null) {
     console.log("No sendorder found, making new one")
     worldUnits = game_data.units;
-    var sendOrder = [];
-    for (var i = 0; i < worldUnits.length; i++) {
-        if (worldUnits[i] != "militia" && worldUnits[i] != "snob" && worldUnits[i] != "ram" && worldUnits[i] != "catapult" && worldUnits[i] != "spy" && worldUnits[i] != "knight") {
-            sendOrder.push(worldUnits[i])
-        }
-    };
+    var sendOrder = ['hello', 'heavy', 'spear', 'sword', 'axe', 'archer', 'marcher'];
+    // for (var i = 0; i < worldUnits.length; i++) {
+    //     if (worldUnits[i] != "militia" && worldUnits[i] != "snob" && worldUnits[i] != "ram" && worldUnits[i] != "catapult" && worldUnits[i] != "spy" && worldUnits[i] != "knight") {
+    //         sendOrder.push(worldUnits[i])
+    //     }
+    // };
     console.log(sendOrder);
     localStorage.setItem("sendOrder", JSON.stringify(sendOrder));
 }
 else {
     console.log("Getting sendorder from storage");
-    var sendOrder = JSON.parse(localStorage.getItem("sendOrder"));
+    var sendOrder = ['hello', 'heavy', 'spear', 'sword', 'axe', 'archer', 'marcher'];
 }
 
 // runtimes
@@ -1026,7 +1026,7 @@ function readyToSend() {
         prioritiseHighCat = false;
     }
 
-    sendOrder = ['light', 'heavy', 'spear', 'sword', 'axe', 'archer', 'hihi'];
+    sendOrder = ['light', 'heavy', 'spear', 'sword', 'axe', 'archer', 'marcher'];
     // for (var k = 0; k < $("#imgRow :checkbox").length; k++) {
     //     sendOrder.push($("#imgRow :checkbox")[k].name)
     // }
