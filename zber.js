@@ -1026,10 +1026,10 @@ function readyToSend() {
         prioritiseHighCat = false;
     }
 
-    sendOrder = ['light', 'heavy', 'spear', 'sword', 'axe', 'archer', 'hihi'];
-    // for (var k = 0; k < $("#imgRow :checkbox").length; k++) {
-    //     sendOrder.push($("#imgRow :checkbox")[k].name)
-    // }
+    sendOrder = [];
+    for (var k = 0; k < $("#imgRow :checkbox").length; k++) {
+        sendOrder.push($("#imgRow :checkbox")[k].name)
+    }
 
     console.log("Runtimes: Off: " + time.off + " Def: " + time.def);
     localStorage.setItem("troopTypeEnabled", JSON.stringify(troopTypeEnabled));
