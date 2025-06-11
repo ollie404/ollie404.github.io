@@ -1,4 +1,3 @@
-javascript:
 var warehouseCapacity = [];
 var allWoodTotals = [];
 var allClayTotals = [];
