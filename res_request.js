@@ -178,15 +178,15 @@ $.getScript(
                         remainingTime: remainingTime,
                     };
                 }
-            });
-
-            villagesData = villagesData.filter((village) => {
-                //const { remainingTime } = village;
-                const remainingTime = ({village = {}}) =>;
+                         villagesData = villagesData.filter((village) => {
+                const { remainingTime } = village;
                 if (remainingTime > 0 && remainingTime <= 3600) {
                     return village;
                 }
             });
+            });
+
+
 
             villagesData.sort(function (left, right) {
                 return left.date - right.date;
