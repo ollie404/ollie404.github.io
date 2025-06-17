@@ -181,7 +181,7 @@ $.getScript(
             });
 
             villagesData = villagesData.filter((village) => {
-                //const { remainingTime } = village;
+                const remainingTime = village;
                 if (remainingTime > 0 && remainingTime <= 3600) {
                     return village;
                 }
