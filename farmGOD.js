@@ -304,7 +304,7 @@ window.FarmGod.Translation = (function() {
       },
       table : {
         noFarmsPlanned : 'ÄąËťiadne farmy nemÄ‚Â´ÄąÄľu byÄąÄ„ poslanÄ‚Â© s aktuÄ‚Ë‡lnym nastavenÄ‚Â­m.',
-        origin : 'PÄ‚Â´vod',
+        origin : 'Pôvod',
         target : 'CieĂ„Äľ',
         fields : 'VzdialenosÄąÄ„',
         farm : 'Vzor',
