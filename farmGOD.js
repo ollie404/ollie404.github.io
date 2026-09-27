@@ -259,33 +259,33 @@ window.FarmGod.Library = ( function()
 window.FarmGod.Translation = (function() {
   const msg = {
     sk_SK : {
-      missingFeatures : 'Skript vyÄąÄľaduje PU a FA!',
+      missingFeatures : 'Skript potrebuje PU a FA!',
       options : {
         title : 'FarmGod Nastavenia',
-        warning : '<b>Upozornenie:</b><br>- Uistite sa, ÄąÄľe A je nastavenÄ‚Ë‡ ako vaÄąË‡a predvolenÄ‚Ë‡ mikrofarma a B ako vÄ‚Â¤Ă„Ĺ¤ÄąË‡ia mikrofarma<br>- Pred pouÄąÄľitÄ‚Â­m skriptu sa uistite, ÄąÄľe sÄ‚Ĺź sprÄ‚Ë‡vne nastavenÄ‚Â© filtre farmy',
+        warning : '<b>Upozornenie:</b><br>- Uistite sa, že A je nastavená ako hlavná mikrofarma a B ako sekundárna mikrofarma<br>- Pred použitim skriptu sa uistite, že máte správne nastavené filtre farmy',
         filterImage : 'https://scripts.cybermine.cz/farmgod.png',
-        group : 'PoslaÄąÄ„ farmy zo skupiny:',
-        distance : 'Max vzdialenosÄąÄ„:',
-        time : 'Max Ă„Ĺ¤as v min medzi farmami:',
-        losses : 'PoslaÄąÄ„ farmy na dediny so stratami:',
-        maxloot : 'PoslaÄąÄ„ B farmu ak bolo lÄ‚Ĺźpenie plnÄ‚Â©:',
-        newbarbs : 'PridaÄąÄ„ novÄ‚Â© barbarky do farmy:',
-        button : 'PlÄ‚Ë‡novaÄąÄ„ farmy',
+        group : 'Poslať farmy zo skupiny:',
+        distance : 'Max vzdialenosť:',
+        time : 'Max rozostup v min medzi farmami:',
+        losses : 'Poslať farmy na dediny so stratami:',
+        maxloot : 'Poslať B farmu ak bola korisť plná:',
+        newbarbs : 'Pridať nové barbarky do farmy:',
+        button : 'Poslať farmy',
       },
       table : {
         noFarmsPlanned : 'ÄąËťiadne farmy nemÄ‚Â´ÄąÄľu byÄąÄ„ poslanÄ‚Â© s aktuÄ‚Ë‡lnym nastavenÄ‚Â­m.',
-        origin : 'PÄ‚Â´vod',
-        target : 'CieĂ„Äľ',
-        fields : 'VzdialenosÄąÄ„',
+        origin : 'Pôvod',
+        target : 'Cieľ',
+        fields : 'Vzdialenosť',
         farm : 'Vzor',
-        goTo : 'Ä‚Ĺ¤sÄąÄ„ do',
+        goTo : 'Poslané do',
         sendAll : 'BLITZKRIEG',
         loading : 'Loading...'
       },
       messages : {
         villageChanged : 'Ä‚ĹˇspeÄąË‡ne zmenenÄ‚Ë‡ dedina!',
         villageError : 'VÄąË‡etky farmy pre sÄ‚ĹźĂ„Ĺ¤asnÄ‚Ĺź dedinu boli odoslanÄ‚Â©!',
-        sendError : 'Error: Farma neposlanÄ‚Ë‡!'
+        sendError : 'Error: Farma neposlaná!'
       }
     },
     int : {
