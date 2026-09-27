@@ -289,33 +289,33 @@ window.FarmGod.Translation = (function() {
       }
     },
     int : {
-      missingFeatures : 'Premko a Farma gzde',
+      missingFeatures : 'PA + FA required',
       options : {
-        title : 'FarmGod Nastavenia',
-        warning : '<b>Upozornenie:</b><br>- Uistite sa, ÄąÄľe A je nastavenÄ‚Ë‡ ako vaÄąË‡a predvolenÄ‚Ë‡ mikrofarma a B ako vÄ‚Â¤Ă„Ĺ¤ÄąË‡ia mikrofarma<br>- Pred pouÄąÄľitÄ‚Â­m skriptu sa uistite, ÄąÄľe sÄ‚Ĺź sprÄ‚Ë‡vne nastavenÄ‚Â© filtre farmy',
+        title : 'FarmGod Settings',
+        warning : '<b>Upozornenie:</b><br> make sure your filters are set according to the image below.',
         filterImage : 'https://scripts.cybermine.cz/farmgod.png',
-        group : 'PoslaÄąÄ„ farmy zo skupiny:',
-        distance : 'Max vzdialenosÄąÄ„:',
-        time : 'Max Ă„Ĺ¤as v min medzi farmami:',
-        losses : 'PoslaÄąÄ„ farmy na dediny so stratami:',
-        maxloot : 'PoslaÄąÄ„ B farmu ak bolo lÄ‚Ĺźpenie plnÄ‚Â©:',
-        newbarbs : 'PridaÄąÄ„ novÄ‚Â© barbarky do farmy:',
-        button : 'PlÄ‚Ë‡novaÄąÄ„ farmy',
+        group : 'Group sent from:',
+        distance : 'Maximum distance:',
+        time : 'Max time between the attacks:',
+        losses : 'Send farms to barbs with partial losses:',
+        maxloot : 'Send B if A was full:',
+        newbarbs : 'Add new barbs:',
+        button : 'Send farm',
       },
       table : {
-        noFarmsPlanned : 'ÄąËťiadne farmy nemÄ‚Â´ÄąÄľu byÄąÄ„ poslanÄ‚Â© s aktuÄ‚Ë‡lnym nastavenÄ‚Â­m.',
-        origin : 'Pôvod',
-        target : 'CieĂ„Äľ',
-        fields : 'VzdialenosÄąÄ„',
-        farm : 'Vzor',
-        goTo : 'Ä‚Ĺ¤sÄąÄ„ do',
-        sendAll : 'ÄşĹ¤Ĺ¤ BLITZKRIEG ÄşĹ¤Ĺ¤',
+        noFarmsPlanned : 'No farms have been planned with the current settings.',
+        origin : 'Origin',
+        target : 'Target',
+        fields : 'Distance',
+        farm : 'Template',
+        goTo : 'Send to',
+        sendAll : '>>> BLITZKRIEG <<<',
         loading : 'Calling in Waffen SS'
       },
       messages : {
-        villageChanged : 'Ä‚ĹˇspeÄąË‡ne zmenenÄ‚Ë‡ dedina!',
+        villageChanged : 'Village has been changed!',
         villageError : 'VÄąË‡etky farmy pre sÄ‚ĹźĂ„Ĺ¤asnÄ‚Ĺź dedinu boli odoslanÄ‚Â©!',
-        sendError : 'Error: Farma neposlanÄ‚Ë‡!'
+        sendError : 'Error: Attack not sent!'
       }
     }
   };
@@ -773,7 +773,7 @@ async function SHIT()
   var buttons = document.getElementsByClassName( 'farmGod_icon' );
 
     var numLow = 200;
-    var numHigh = 600;
+    var numHigh = 500;
     var adjustedHigh = (parseFloat(numHigh) - parseFloat(numLow)) + 1;
     
     $('.switchVillage').click();
