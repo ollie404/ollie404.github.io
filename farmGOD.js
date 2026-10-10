@@ -427,7 +427,7 @@ window.FarmGod.Main = ( function( Library, Translation )
                   <tr><td>${t.options.time}</td><td><input type="text" size="5" class="optionTime" value="${options.optionTime}"></td></tr>
                   <tr><td>${t.options.losses}</td><td><input type="checkbox" class="optionLosses" ${(options.optionLosses) ? 'checked' : ''}></td></tr>
                   <tr><td>${t.options.maxloot}</td><td><input type="checkbox" class="optionMaxloot" ${(options.optionMaxloot) ? 'checked' : ''}></td></tr>
-                  ${(game_data.market == 'en') ? `<tr><td>${t.options.newbarbs}</td><td><input type="checkbox" class="optionNewbarbs" ${(options.optionNewbarbs) ? 'checked' : ''}></td></tr>` : ''}
+                  ${(game_data.market == 'en' || game_data.market == 'sk') ? `<tr><td>${t.options.newbarbs}</td><td><input type="checkbox" class="optionNewbarbs" ${(options.optionNewbarbs) ? 'checked' : ''}></td></tr>` : ''}
                 </table></div><br><input type="button" class="btn optionButton" value="${t.options.button}"></div>`;
     });
   };
